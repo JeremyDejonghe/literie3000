@@ -22,6 +22,10 @@ include("./tpl/header.php");
 
 <h1><?= $data["nom"] ?></h1>
 
+<a href="http://localhost/literie3000/update_matelas.php?id=<?= $data["id"] ?>">
+    <div class="btn">Modifier un Matelas</div>
+</a>
+
 <?php
 if ($find) {
 ?>
