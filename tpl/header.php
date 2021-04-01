@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Literie 3000</title>
 </head>
+
 <body>
     <header>
-        <img src="./assets/img/logofondtransparent.png" alt="">
+        <a href="http://localhost/literie3000/">
+            <img src="./assets/img/logofondtransparent.png" alt="">
+        </a>
     </header>
-    

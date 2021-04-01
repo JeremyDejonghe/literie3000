@@ -29,15 +29,17 @@ include("./tpl/header.php");
 <?php
 if ($find) {
 ?>
-    <img src="<?= $data["image"] ?>" alt="">
-    <h4><?= $data["marque"] ?></h4>
-    <h5><?= $data["nom"] ?></h5>
-    <h3><?= $data["prix"] ?></h3>
-    <h2><?= $data["promo"] ?></h2>
-    <form action="delete.php" method="post">
-        <input type="hidden" name="id" value="<?= $data["id"] ?>">
-        <input class="delete" type="submit" value="X">
-    </form>
+    <div class="lit">
+        <img src="<?= $data["image"] ?>" alt="">
+        <h4><?= $data["marque"] ?></h4>
+        <h5><?= $data["nom"] ?></h5>
+        <h3><?= $data["prix"] ?></h3>
+        <h2><?= $data["promo"] ?></h2>
+        <form action="delete.php" method="post">
+            <input type="hidden" name="id" value="<?= $data["id"] ?>">
+            <input class="delete" type="submit" value="X">
+        </form>
+    </div>
 <?php
 }
 include("./tpl/footer.php");
