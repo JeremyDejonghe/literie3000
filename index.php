@@ -3,12 +3,10 @@
 $dsn = "mysql:host=localhost;dbname=literie3000";
 $db = new PDO($dsn, "root", "");
 
-$query = $db->query("SELECT image, marque, nom, prix, promo
-FROM matelas");
+$query = $db->query("SELECT * FROM matelas");
 $matelas = $query->fetchAll();
 
-$query = $db->query("SELECT nom
-FROM dimensions");
+$query = $db->query("SELECT nom FROM dimensions");
 $dimensions = $query->fetchAll();
 
 include("tpl/header.php");
@@ -26,14 +24,14 @@ include("tpl/header.php");
             <div class="matela">
                 <img src="<?= $matela["image"] ?>" alt="">
                 <h4><?= $matela["marque"] ?></h4>
-                <h5><?= $matela["nom"] ?></h5>
+                <a href="matelas.php?id=<?= $matela["id"] ?>"><h5><?= $matela["nom"] ?></h5></a>
                 <select name="dimension" id="dimensions">
                     <?php foreach ($dimensions as $dimension) { ?>
                         <option value="<?php $dimension["nom"] ?>"><?= $dimension["nom"] ?></option>
                     <?php } ?>
                 </select>
                 <h3><?= $matela["prix"] ?></h3>
-                <h2><?= $matela["promo"] ? $matela["promo"] : "" ?></h2>
+                <h2><?= $matela["promo"] ? $matela["promo"] : $matela["prix"] ?></h2>
             </div>
         <?php
         }
