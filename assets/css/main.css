@@ -7,3 +7,19 @@ header {
     display: flex;
     justify-content: center;
 }
+
+h1 {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.matelas {
+    display: flex;
+    margin: 5rem;
+}
+
+.matela {
+    flex-basis: 25%;
+}
